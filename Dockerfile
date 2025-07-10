@@ -6,6 +6,6 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy tất cả file ở thư mục hiện tại (.) vào html
 COPY . /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["nginx", "-g", "daemon off;"]
