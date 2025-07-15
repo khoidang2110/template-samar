@@ -1,11 +1,11 @@
-FROM nginx:stable-alpine
+# Dockerfile
+FROM nginx:alpine
 
-# Xóa thư mục mặc định
+# Xoá file mặc định
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy tất cả file ở thư mục hiện tại (.) vào html
+# Copy toàn bộ trang web tĩnh vào thư mục web server
 COPY . /usr/share/nginx/html
 
-EXPOSE 3000
-
-CMD ["nginx", "-g", "daemon off;"]
+# Expose port 80
+EXPOSE 80
